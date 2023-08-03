@@ -19,6 +19,9 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                
+                <a href="{{ route('admin.projects.index')}}" class="btn btn-sm btn-primary">Push to show projects</a>
+
             </div>
         </div>
     </div>
