@@ -6,8 +6,9 @@
             <div class="col">
                 <div class="card mt-4">
                     <div class="card-header">
-                        <div class="card-title">
+                        <div class="card-title d-flex justify-content-between">
                             <h3>My Projects</h3>
+                            <a href="{{ route('admin.projects.create')}}" class="btn btn-primary">Crea il tuo progetto</a>
                         </div>
                     </div>
 
