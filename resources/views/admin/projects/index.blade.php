@@ -30,7 +30,7 @@
                                         <td>{{ $project->inizio_progetto}}</td>
                                         <td>
                                             <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i></a>
-                                            <a href="#" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
                                             <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
