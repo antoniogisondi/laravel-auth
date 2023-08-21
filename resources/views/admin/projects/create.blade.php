@@ -10,11 +10,11 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="{{ route('admin.projects.store')}}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="titolo" class="form-label">Inserisci il titolo</label>
-                                <input type="text" class="form-control" id="titolo" placeholder="Inserisci il titolo del progetto">
+                                <input type="text" class="form-control" id="titolo" name="titolo" placeholder="Inserisci il titolo del progetto">
                             </div>
                             <div class="mb-3">
                                 <label for="descrizione" class="form-label">Inserisci descrizione</label>
@@ -22,11 +22,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inizio_progetto" class="form-label">Inserisci la data di inizio</label>
-                                <input type="date" class="form-control" id="inizio_progetto">
+                                <input type="text" class="form-control" id="inizio_progetto" name="inizio_progetto">
                             </div>
                             <div class="mb-3">
                                 <label for="consegna_progetto" class="form-label">Inserisci la data di consegna</label>
-                                <input type="date" class="form-control" id="consegna_progetto">
+                                <input type="text" class="form-control" id="consegna_progetto" name="consegna_progetto">
                             </div>
 
                             <div class="submit mb-3">
@@ -39,5 +39,3 @@
         </div>
     </div>
 @endsection
-
-in
