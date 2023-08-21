@@ -20,6 +20,7 @@
                                     <th>Data inizio</th>
                                     <th>Data consegna</th>
                                     <th>Feedback</th>
+                                    <th>Strumenti</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,6 +38,11 @@
                                             @else
                                                 Il progetto è scaduto
                                             @endif
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
