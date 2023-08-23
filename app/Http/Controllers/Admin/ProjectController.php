@@ -86,6 +86,14 @@ class ProjectController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $form_data = $request->all();
+        if ($request->hasFile('img')) {
+            if ($project->img) {
+                Storage::delete($project->img);
+            }
+
+            $path = Storage::put('project_images', $request->img);
+            $form_data['img'] = $path;
+        }
         $project->update($form_data);
         return redirect()->route('admin.projects.show', $project->id);
     }

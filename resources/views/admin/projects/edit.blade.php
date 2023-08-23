@@ -19,7 +19,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="{{ route('admin.projects.update', $project->id)}}" method="POST">
+                        <form action="{{ route('admin.projects.update', $project->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
@@ -29,6 +29,13 @@
                             <div class="mb-3">
                                 <label for="descrizione" class="form-label">Inserisci descrizione</label>
                                 <textarea class="form-control" id="descrizione" name="descrizione" rows="3" placeholder="Inserisci la descrizione del progetto">{{ old('descrizione') ?? $project->descrizione}}</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <div class="image-container">
+                                    <img src="{{ asset('storage/'.$project->img)}}">
+                                </div>
+                                <label for="img" class="form-label">Inserisci immagine</label>
+                                <input type="file" class="form-control" id="img" name="img">
                             </div>
                             <div class="mb-3">
                                 <label for="inizio_progetto" class="form-label">Inserisci la data di inizio</label>

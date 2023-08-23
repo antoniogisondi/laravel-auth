@@ -26,8 +26,9 @@ class UpdateProjectRequest extends FormRequest
         return [
             'titolo' => 'required|max:50',
             'descrizione' => 'required|max:255',
-            'inizio_progetto' => 'required',
-            'consegna_progetto' => 'required'
+            'inizio_progetto' => 'required|date_format:Y-m-d',
+            'consegna_progetto' => 'required|date_format:Y-m-d',
+            'img'               => 'image|max:250'
         ];
     }
 
@@ -38,9 +39,11 @@ class UpdateProjectRequest extends FormRequest
             'descrizione.required' => 'Il campo della descrizione deve essere compilato',
             'descrizione.max' => 'Il campo della descrizione deve contenere al massimo :max caratteri',
             'inizio_progetto.required' => 'Il campo dell\' inizio del progetto deve essere compilato',
-            'inizio_progetto.integer' => 'Il campo dell\'inizio progetto deve essere di tipo numerico e deve contenere i seguenti caratteri: -',
+            'inizio_progetto.date_format'   => 'Il formato della data deve essere nell\' ordine anno-mese-giorno',
             'consegna_progetto.required' => 'Il campo dell\' inizio del progetto deve essere compilato',
-            'consegna_progetto.integer' => 'Il campo dell\'inizio progetto deve essere di tipo numerico e deve contenere i seguenti caratteri: -'
+            'consegna_progetto.date_format' => 'Il formato della data deve essere nell\' ordine anno-mese-giorno',
+            'img.image'                     => 'Il formato dell\' immagine dev\'essere di tipo jpg, jpeg, webp, png',
+            'img|max'                       => 'L\' immagine deve essere lunga al massimo :max caratteri'
         ];
     }
 }
