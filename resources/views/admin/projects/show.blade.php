@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="card mt-5">
-                    <div class="card-header">
+                    <div class="card-header image-container">
+                        <img src="{{ asset('storage/'.$project->img)}}">
                         <h3>{{ $project->titolo }}</h3>
                     </div>
 
